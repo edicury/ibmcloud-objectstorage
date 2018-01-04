@@ -1,0 +1,24 @@
+{
+  "name": "ibmcloud-objectstorage",
+  "version": "0.0.0",
+  "description": "Object Storage npm for IBM Cloud",
+  "main": "objectstorage.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edicury/ibmcloud-objectstorage.git"
+  },
+  "keywords": [
+    "ibmcloud",
+    "objectstorage",
+    "bluemix"
+  ],
+  "author": "Edison Cury Neto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edicury/ibmcloud-objectstorage/issues"
+  },
+  "homepage": "https://github.com/edicury/ibmcloud-objectstorage#readme"
+}
