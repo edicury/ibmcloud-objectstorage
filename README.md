@@ -35,6 +35,17 @@ var os = new ObjectStorage(config, "my-container");
 
 ibmcloud-objectstorage uses the following functions, which are all promises:
 
+```create``` - Creates a container with the name you specified.
+```javascript
+    os.create("my-container").then((response) => {
+        console.log(response);
+    })
+    .catch((err) => {
+        console.log(err);
+    })
+```
+
+
 ```find``` - Retrieves all the files inside the container you specified.
 ```javascript
     os.find().then((response) => {
