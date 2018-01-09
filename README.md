@@ -17,7 +17,7 @@ $ npm install ibmcloud-objectstorage -s
 
 In your .js file, using the credentials you retrieved from the IBM Cloud console, fill the attributes inside ```config```
 ```javascript
-var ObjectStorage = require('./cloudstorage');
+var ObjectStorage = require('ibmcloud-objectstorage');
 var config = {
     provider: '',
     useServiceCatalog: true,
