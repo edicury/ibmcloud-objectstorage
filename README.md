@@ -58,7 +58,7 @@ ibmcloud-objectstorage uses the following functions, which are all promises:
 
 ```findByName``` - Retrieves the file you specified, from the container.
 ```javascript
-    os.findByName('file.txt').then((response) => {
+    os.findByName('file.txt', './uploads/').then((response) => {
         console.log(response);
     })
     .catch((err) => {

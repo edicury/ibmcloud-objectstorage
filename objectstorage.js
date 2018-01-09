@@ -61,7 +61,7 @@ class ObjectStorage{
         })
     };
     
-    findByName(name){
+    findByName(name, path){
         return new Promise((resolve, reject) => {
             this.init().then((storage) => {
                 var client = storage.client;
@@ -74,7 +74,7 @@ class ObjectStorage{
                     var upload = client.download({
                         container: container.name,
                         remote: name
-                    }).pipe(fs.createWriteStream('./uploads/' + name));
+                    }).pipe(fs.createWriteStream(path + name));
                     upload.on('finish', () => {
                             resolve(upload);
                             console.log('Download finished');
@@ -117,8 +117,9 @@ class ObjectStorage{
                 var myFile = fs.createReadStream(file.path);
                 var upload = client.upload({
                     container: container.name,
-                    remote: file.fieldname
+                    remote: file.originalFilename
                 });
+                console.log(JSON.stringify(upload))
                 
                 upload.on('error', function (err) {
                     console.error(err);
