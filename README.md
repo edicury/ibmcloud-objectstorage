@@ -19,7 +19,7 @@ In your .js file, using the credentials you retrieved from the IBM Cloud console
 ```javascript
 var ObjectStorage = require('ibmcloud-objectstorage');
 var config = {
-    provider: '',
+    provider: 'openstack',
     useServiceCatalog: true,
     useInternal: false,
     keystoneAuthVersion: 'v3',
