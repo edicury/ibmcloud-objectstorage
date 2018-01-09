@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/edicury/ibmcloud-objectstorage/issues"
   },
-  "homepage": "https://github.com/edicury/ibmcloud-objectstorage#readme"
+  "homepage": "https://github.com/edicury/ibmcloud-objectstorage#readme",
+  "dependencies": {
+    "pkgcloud": "^1.5.0"
+  }
 }
