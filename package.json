@@ -1,6 +1,6 @@
 {
   "name": "ibmcloud-objectstorage",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Object Storage npm for IBM Cloud",
   "main": "objectstorage.js",
   "scripts": {
