@@ -30,7 +30,7 @@ class ObjectStorage{
     
     create(containerToBeCreated){
         return new Promise((resolve, reject) => {
-            var storageClient = pkgcloud.storage.createClient(config);
+            var storageClient = pkgcloud.storage.createClient(this.config);
             storageClient.createContainer(containerToBeCreated, (err, response) => {
                 console.log(err);
                 if(err){
