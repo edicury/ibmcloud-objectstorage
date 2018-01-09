@@ -132,6 +132,34 @@ class ObjectStorage{
             })
         })
     };
+
+    getFile(fileName){
+        return new Promise((resolve, reject) => {
+            this.init().then((storage) => {
+                var client = storage.client;
+                var container = storage.container;
+                client.getFile(container, fileName, (err, file) => {
+                    if (err) reject({
+                        err: true,
+                        status: 404
+                    });
+                    var upload = client.download({
+                        container: container.name,
+                        remote: name
+                    }).pipe(fs.createWriteStream(path + fileName));
+                    upload.on('finish', () => {
+                            resolve(upload);
+                            console.log('Download finished');
+                        })
+                        .on('error', () => {
+                            reject({
+                                err: true
+                            })
+                        })
+                })
+            })
+        })
+    }
 }
 
 module.exports = ObjectStorage;
