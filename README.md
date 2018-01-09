@@ -22,7 +22,7 @@ var config = {
     provider: '',
     useServiceCatalog: true,
     useInternal: false,
-    keystoneAuthVersion: '',
+    keystoneAuthVersion: 'v3',
     authUrl: '',
     tenantId: '', //projectId from credentials
     domainId: '',
