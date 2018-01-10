@@ -145,7 +145,7 @@ class ObjectStorage{
                     });
                     var upload = client.download({
                         container: container.name,
-                        remote: name
+                        remote: fileName
                     }).pipe(fs.createWriteStream(path + fileName));
                     upload.on('finish', () => {
                             resolve(upload);
